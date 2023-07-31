@@ -22,6 +22,10 @@ export default function VolunteerDashboard(){
         }
     })();
     }, [])
+
+    const handleLogout = () => {
+        navigate('/')
+    }
     return(
         <div className="centered-container" style={{backgroundColor: '#CCCCFF', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', textAlign: 'center'}}>
             <Card style={{ width: '800px' , height: '530px', border: '1px solid black'}}>
@@ -54,6 +58,9 @@ export default function VolunteerDashboard(){
                     ) : (
                         <p>No Event Assigned.</p>
                     )}
+
+                    <br />
+                    <Button variant="contained" style={{backgroundColor: '#CCCCFF', color: 'black', border: '1px solid black'}} fullWidth type="submit" onClick={handleLogout}>Logout</Button>
                 </CardContent>
             </Card>
         </div>
